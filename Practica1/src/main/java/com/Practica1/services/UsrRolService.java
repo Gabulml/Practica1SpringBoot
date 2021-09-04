@@ -23,12 +23,14 @@ public class UsrRolService {
 		return (List<UsrRol>) usrRolRepository.findAll();
 	}
 	
-	public void ingresarNuevoRol (UsrRol objUsrRol) {
-		usrRolRepository.save(objUsrRol);
+	public UsrRol ingresarNuevoRol (UsrRol objUsrRol) {
+		//usrRolRepository.save(objUsrRol);
+		return usrRolRepository.save(objUsrRol);
 	}
 	
 	public void eliminarRol (UsrRol objUsrRol) {
-		usrRolRepository.delete(objUsrRol);
+//	public UsrRol eliminarRol (UsrRol objUsrRol) {
+		 usrRolRepository.delete(objUsrRol);
 	}
 	
 	public UsrRol actualizarRol (UsrRol objUsrRol) {

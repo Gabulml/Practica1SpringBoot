@@ -10,9 +10,11 @@ import com.Practica1.services.UsrRolService;
 
 @SpringBootApplication
 public class Practica1Application implements CommandLineRunner {
+//public class Practica1Application {
+	
 	
 	@Autowired
-	private UsrRolService usrRolService;
+	private UsrRolService usrRolService; 
 
 	public static void main(String[] args) {
 		SpringApplication.run(Practica1Application.class, args);
@@ -22,7 +24,7 @@ public class Practica1Application implements CommandLineRunner {
 	
 	//  usrRolService.ingresarNuevoRol(new UsrRol( new Long(3), "Pepi", "A", "sOY DN PEPI"));
 	//	usrRolService.eliminarRol(new UsrRol( new Long(3), "Pepi", "A", "sOY DN PEPI"));
-		usrRolService.actualizarRol(new UsrRol( new Long(3), "Pepi", "A", "sOY DN PEPI podeoros jaja"));
+		//usrRolService.actualizarRol(new UsrRol( new Long(3), "Pepi", "A", "sOY DN PEPI podeoros jaja"));
 		usrRolService.obtenerTodosRol().forEach(rol->{
 		//trae solo el id de la BD   ->  Rol existente-> 1
 		//System.out.println("Rol existente-> " + rol.getIdRol());
@@ -37,5 +39,7 @@ public class Practica1Application implements CommandLineRunner {
 	// con esta sentencia en el archivo application.properties podemos obtener la sentencia jpql que realiza para obtener los datos, dando como resultado la siguinete linea
 	//Hibernate: select usrrol0_.id_rol as id_rol1_0_, usrrol0_.estado as estado2_0_, usrrol0_.nombre as nombre3_0_, usrrol0_.observacion as observac4_0_ from usr_rol usrrol0_
 	
+	
+	//server.port=8581  -> si queremos cambiar de puerto en el archivo applications.properties
 
 }
